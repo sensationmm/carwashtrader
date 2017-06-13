@@ -1,0 +1,7 @@
+$base-font-family: 'arial';
+
+$webfonts: (
+	'montserrat-bold',
+	'montserrat-regular'
+);
+@include webfonts($webfonts);

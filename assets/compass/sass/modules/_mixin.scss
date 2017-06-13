@@ -1,0 +1,45 @@
+@mixin background($image, $positionY:top, $positionX:left, $size:contain, $repeat:no-repeat)
+{
+	background-image: url($image);
+	background-size: $size;
+	background-position: $positionX $positionY;
+	background-repeat: $repeat;
+}
+
+@mixin fontsize($value, $lineHeight: 1.4)
+{
+	font-size: $value + 0px;
+	@include breakpoint(0 $mobile) {
+		font-size: $value / 4 + 0vw;
+	}
+	@include breakpoint(($mobile+1) $mobile-landscape) {
+		font-size: $value / 6 + 0vw; 
+	}
+	@include breakpoint(($mobile-landscape+1) $tablet-landscape) {
+		font-size: $value / 10 + 0vw; 
+	}
+	line-height: $lineHeight;
+}
+
+@mixin webfonts($webfonts, $weight: normal, $style: normal) {
+	@each $webfont in $webfonts {
+		@font-face {
+			font-family: $webfont;
+			src: url('../fonts/#{$webfont}.eot');
+			src: url('../fonts/#{$webfont}.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/#{$webfont}.woff') format('woff'),
+			url('../fonts/#{$webfont}.ttf') format('truetype'),
+			url('../fonts/#{$webfont}.svg#ywftsvg') format('svg');
+			font-weight: $weight;
+			font-style: $style;
+		}
+		%#{$webfont}-webfont {
+			font-family: $webfont, $base-font-family !important;
+		}
+	}
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 

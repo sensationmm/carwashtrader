@@ -1,0 +1,370 @@
+
+article {
+	.filterBox {
+		@include span(full);
+		color: $white;
+		padding: 2.5%;
+		background: $purple-dark;
+		margin-bottom: 2%; 
+	}
+
+	.content {
+		padding: 0 2%;
+	}
+	
+	.listing {
+		@include span(full);
+		padding: 2% 2% 0% 2%;
+		background: $purple-light url(../images/background-listing.gif) top left no-repeat;
+		background-size: 100% 100%;
+		margin-bottom: 2%;
+		
+		.listingInner {
+			@include span(full);
+			background: $white top right no-repeat; 
+			background-size: 25%;
+			background-position: 100% 50%;
+			padding: 2%;
+			@include clearfix;
+			margin-bottom: 2%;
+
+			&.listing-carwashes { background-image: url(../images/background-carwashes.svg); }
+			&.listing-forsale { background-image: url(../images/background-forsale.svg); }
+			&.listing-suppliers { background-image: url(../images/background-suppliers.svg); }
+			&.listing-products { background-image: url(../images/background-products.svg); }
+			&.listing-jobs { background-image: url(../images/background-jobs.svg); }
+			
+			.listingSection {
+				margin-bottom: 10px;
+
+				h4 { margin-top: 4%; }
+			}
+		
+			.listing-photo {
+				@include span(2 of 9);
+				
+				.listing-photoInner {
+					height: 0;
+					padding-bottom: 100%;
+					background: url(../images/listing-image.jpg) no-repeat center center;
+					background-size: cover;
+					margin-bottom: 10%; 
+					cursor: pointer;
+
+					&.listing-photo-present { background: none; }
+				
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+					
+				.galleryLink {
+					margin-top: 10%;
+					padding-left: 20%;
+					@include fontsize(12, 1.2);
+					color: $purple-dark;
+					display: block;
+					background: url(../images/icon-camera.svg) top left no-repeat;
+					background-size: 15%;
+				}
+				
+				.galleryHidden {
+					display: none;
+				}
+				
+				.mapThumb {
+					width: 100%;
+					height: 0;
+					padding-bottom: 100%;
+					background: $purple-dark;
+				}
+					
+				.mapLink {
+					margin-top: 10%;
+					padding-left: 20%;
+					@include fontsize(12, 1.2);
+					color: $purple-dark;
+					display: block;
+					background: url(../images/icon-pinPurple.svg) top left no-repeat;
+					background-size: contain;
+				}
+				
+				.mapLoc {
+					display: none;
+				}
+			}
+			
+			.listingInfo {
+				@include fontsize(12, 1.2);
+				@include span(7 of 9 last);
+
+				@include clearfix;
+
+				h3 { 
+					background: none !important; 
+					padding-left: 0px !important; 
+					cursor: pointer; 
+					width: 70%;
+
+					&:hover { text-decoration: underline; }
+				}
+
+				ul, li { list-style: inside disc; }
+				
+				.listingInfoDetailsLeft {
+					float: left;
+					width: 40%;
+					margin-right: 10%;
+				}
+				
+				.listingInfoDetailsRight {
+					float: left;
+					width: 50%;
+				}
+
+				&.jobListing { 
+					@include span(9 of 9 last); 
+				
+					.listingInfoDetailsLeft { width: 30%; }
+					.listingInfoDetailsRight { width: 60%; }
+				}
+			}
+			
+			.listingHidden {
+				display: none;
+				//width: 90%;
+			}
+				
+			.listingInfoReadMore {
+				position: absolute;
+				padding-left: 3%;
+				right: 2%;
+				bottom: 5%;
+				width: 14%;
+				background: url(../images/icon-readmore.svg) top left no-repeat;
+				background-size: contain;
+				clear: both;
+				@include fontsize(12);
+				color: $purple-dark;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			
+			&.expanded {
+				.listingInfo .listingInfoDetailsLeft, .listingInfo .listingInfoDetailsRight {
+					width: 100%;
+					margin-right: 0;
+				}
+
+				.clearbreaks {
+					br { display: none; }
+				}
+
+				.listingHidden { display: block; }
+				.listingShown { display: none; }
+
+				.jobListing { @include span(6 of 9); }
+			}
+		}
+		
+		.listingReview {
+			color: $purple-dark;
+			position: absolute;
+			top: 0px;
+			right: 1%;
+			padding-top: 1%;
+			z-index: 2;
+			width: 30%;
+			text-align: right;
+			height: 0;
+			padding-bottom: 5%;
+
+			&.forsale { top: 15px; }
+			
+			img {
+				width: 10%;
+				height: auto;
+				vertical-align: middle;
+				margin-left: 4%;
+			}
+
+			a {
+				text-decoration: none;
+				&:hover { text-decoration: underline; }
+			}
+		}
+			
+		.listingContact {
+			width: 104%;
+			clear: both;
+			color: $white;
+			background: $purple-dark;
+			padding: 2% 3%;
+			margin: 0 -2% 2% -2%;
+			
+			.listingWebsite {
+				position: absolute;
+				right: 1%;
+				top: 1%;
+				height: 60%;
+				width: 23%;
+				padding-left: 9%;
+				margin-top: 1%;
+				padding-top: 1%;
+				background: url(../images/icon-website.svg) 10px 10% no-repeat;
+				background-size: contain;
+
+				a {
+					text-decoration: none;
+					&:hover { text-decoration:underline; }
+				}
+			}
+
+			.listingAdmin {
+				position: absolute;
+				top: 30%;
+				left: 40%;
+			}
+		}
+	}
+	
+	.searchResults {
+		background: $purple-light;
+		height: 0;
+		padding: 1% 2% 3% 2%;
+		margin-bottom: 4%;
+		clear: both;
+		color: $white;
+	}
+	
+	.viewToggle {
+		position: absolute;
+		top: 6%;
+		right: 30px;
+		
+		a:link, a:visited, a:active {
+			padding: 0% 0% 0% 30%;
+			background: url(../images/icon-pin.svg) top left no-repeat;
+			background-size: contain;
+			display: block;
+			white-space: nowrap;
+		}
+	}
+	
+	.mainMap {
+		width: 100%;
+		height: 0;
+		padding-bottom: 80%;
+	}
+	
+	.pagination {
+		background: $purple-light;
+		height: 0;
+		padding: 1% 2% 4% 2%;
+		margin-bottom: 4%;
+		text-align: center;
+		clear: both;
+		color: $white;
+
+		a { 
+			text-decoration: none; 
+
+			&:hover { text-decoration: underline; }
+		}
+
+		.page-numbers { margin: 0 0.5%; }
+		
+		.next { position: absolute; right: 2%; }
+		.prev { position: absolute; left: 2%; }
+		.current { color: $purple-dark; cursor: default; }
+	}
+	
+	.adverts {
+		@include span(full);
+		@include clearfix;
+		margin-bottom: 4%;
+		
+		.advert {
+			@include span(3 of 9);
+			height: 0;
+			padding-bottom: 30.5785124%;
+			background: url(../images/adspace-inlisting.gif) top left no-repeat;
+			background-size: contain;
+			overflow: hidden;
+
+			img { width: 100%; height: auto; }
+
+			&:last-of-type {
+				@include span(3 of 9 last);
+			}
+		}
+	}
+	
+	.purpleBox {
+		padding: 2%;
+		/*background: $purple-light url(../images/background-listing.svg) top left no-repeat;*/
+		background: $purple-mid no-repeat;
+		background-size: cover; 
+		@include clearfix;
+		@extend %montserrat-regular-webfont;
+		margin-bottom: 2%;
+		color: $white;
+
+		h3 { color: $white; }
+
+		&.advert { 
+			h3 { width: 80%; display: block; margin-bottom: 1%; }
+			ul, li { list-style: none; margin-bottom: 0;}
+		}
+	}
+	
+	.addListing {
+		padding: 1%;
+		/*background: $purple-light url(../images/background-listing.svg) top left no-repeat;*/
+		background: $green no-repeat;
+		background-size: cover; 
+		@include clearfix;
+		@extend %montserrat-regular-webfont;
+		margin-bottom: 2%;
+		color: $white;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+
+			&:hover { text-decoration: underline; }
+		}
+	}
+
+	table.form-table {
+		display: none;
+	}
+}
+
+html.ie8 {
+	article {
+		.listing {
+			.listing-carwashes { background-image: url(../images/background-carwashes.png); background-size:150px;  }
+			.listing-forsale { background-image: url(../images/background-forsale.png); background-size: 20%; }
+			.listing-suppliers { background-image: url(../images/background-suppliers.png); background-size: 20%; }
+			.listing-products { background-image: url(../images/background-products.png); background-size: 20%; }
+			.listing-jobs { background-image: url(../images/background-jobs.png); background-size: 20%; }
+
+			.listingInner { 
+				background:#fff; 
+
+				.listing-photo {
+					.galleryLink { background-image: url(../images/icon-camera.png); background-size: auto; }
+					.mapLink { background-image: url(../images/icon-pinPurple.png); background-size: auto; }
+				}
+
+				.listingInfoReadMore { background-image: url(../images/icon-readmore.png); background-size: auto;  }
+			}
+		}
+
+		.adverts {
+			.advert { margin: 0 1.3%; }
+		}
+	}
+}

@@ -1,0 +1,127 @@
+
+section {
+		
+	.leftmenulist {
+		
+		margin-bottom: 15%;
+			
+		.header {
+			background: $purple-dark;
+			color: #fff;
+			@extend %montserrat-bold-webfont;
+			padding: 4.5%;
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			a {
+				display: block;
+				text-decoration: none;
+
+				&:hover { text-decoration: underline; }
+			}
+		}
+		
+		ul {
+			list-style: none;
+			color: $purple-dark;
+			padding: 0px;
+			margin: 0px;
+			
+			li {
+				height: 100%;
+				padding: 4.5%;
+				border-bottom: 1px solid $purple-dark;
+				//background: url(../images/arrow.svg) center right no-repeat;
+				background-size: contain;
+
+				a {
+					display: block;
+					text-decoration: none;
+
+					&:hover { text-decoration: underline; }
+				}
+
+				&.sub a {
+					color: $grey-dark;
+				}
+				
+				&.active {
+					background-color: $purple-light;
+				}
+			}
+
+			&.feature {
+				li { 
+					background: none;
+					padding-bottom: 2%;
+					position: relative;
+
+					.featureInfo, .featureLink {
+						@include fontsize(12);
+						color: $grey-dark;
+						a:link, a:visited, a:active { text-decoration: underline; }
+						line-height: 1.4;
+					}
+
+					.featureInfo {
+						top: -10px;
+					}
+
+					.featureLink {
+						position: absolute;
+						top: none; 
+						right: 0px;
+						bottom: 0px;
+					}
+				}
+			}
+		}
+		
+		.footer {
+			background: $purple-light url(../images/icon-register.svg) top left no-repeat;
+			background-size: contain;
+			color: #fff;
+			@extend %montserrat-bold-webfont;
+			padding: 2.5% 4.5% 2.5% 22.5%;
+			top: -1px;
+		}
+	}
+	
+	.filter {
+		@extend .leftmenulist;
+		.header { background-image: url(../images/icon-filter.svg); }
+	}
+	
+	.jobalerts {
+		@extend .leftmenulist;
+		.header { background-image: url(../images/icon-jobalerts.svg); }
+	}
+	
+	.reviews {
+		@extend .leftmenulist;
+		.header { background-image: url(../images/icon-reviews.svg); }
+	}
+	
+	.advert {
+		@include span(full); 
+		margin-bottom: 6%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.filterMobile {
+	display: none;
+}
+
+html.ie8 {
+	section {
+		.leftmenulist { .footer { background-image: url(../images/icon-register.png); background-image:none; } }
+		.filter { .header { background-image: url(../images/icon-filter.png); background-image:none; } }
+		.jobalerts { .header { background-image: url(../images/icon-jobalerts.png); background-image:none; } }
+		.reviews { .header { background-image: url(../images/icon-reviews.png); background-image:none; } }
+	}
+}

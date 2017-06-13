@@ -1,0 +1,20 @@
+
+
+#jobs, #jobsmap-view {
+	.confirmation {
+		@extend .purpleBox;
+		background-image: url(../images/no-results.svg) !important;
+		background-size: 40% !important;
+		height: auto !important;
+		min-height: 18em;
+		
+		
+		h3 { color: $white !important; }
+		
+		padding: 7% 2% 7% 40% !important;
+	}
+}
+
+
+
+

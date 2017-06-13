@@ -1,0 +1,349 @@
+@media screen and (max-device-width: $mobile-landscape), 
+screen and (max-width: $mobile-landscape) {
+	@include layout(9);
+
+	header, footer, article, section {
+		@include span(9 of 9 last);
+	}
+
+	header {
+		padding-bottom: 27%;
+		.logo { width: 90%; padding-bottom: 27%; }
+	}
+
+	h1, h1.imageHeader {
+		background-image: none !important;
+		height: auto;
+		padding: 5%;
+		text-align: center;
+		@include fontsize(40, 1);
+	}
+
+	article {
+
+		.filter {
+			label { 
+				width: 100%  !important;
+				background: none !important; 
+				color:$white !important; 
+				margin-bottom: 0px !important; 
+				padding: 0px 0px 1.5% 0px !important; 
+			}
+			input[type="text"] { width: 100%; }
+		}
+
+		.formBox input[type="file"] {
+			width: 73% !important;
+		}
+
+		.filterMobile {
+			display: block;
+			margin-bottom: 2%;
+			clear: both;
+			
+			.header {
+				background: $purple-dark;
+				color: #fff;
+				padding: 4.5%;
+				background-position: top right;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				a {
+					display: block;
+					text-decoration: none;
+
+					&:hover { text-decoration: underline; }
+				}
+			}
+			
+			ul {
+				display: none;
+				list-style: none;
+				color: $purple-dark;
+				padding: 0px;
+				margin: 0px;
+				
+				li {
+					height: 100%;
+					padding: 4.5%;
+					border-bottom: 1px solid $purple-dark;
+					//background: url(../images/arrow.svg) center right no-repeat;
+					background-size: contain;
+
+					a {
+						display: block;
+						text-decoration: none;
+
+						&:hover { text-decoration: underline; }
+					}
+
+					&.sub a {
+						color: $grey-dark;
+					}
+					
+					&.active {
+						background-color: $purple-light;
+					}
+				}
+
+				&.feature {
+					li { 
+						background: none;
+						padding-bottom: 2%;
+						position: relative;
+
+						.featureInfo, .featureLink {
+							@include fontsize(12);
+							color: $grey-dark;
+							a:link, a:visited, a:active { text-decoration: underline; }
+							line-height: 1.4;
+						}
+
+						.featureInfo {
+							top: -10px;
+						}
+
+						.featureLink {
+							position: absolute;
+							top: none; 
+							right: 0px;
+							bottom: 0px;
+						}
+					}
+				}
+			}
+			.header { background-image: url(../images/icon-filter.svg); }
+		}
+
+		.listing {
+			.listingInner {
+				padding-bottom: 10%;
+
+				.listingSection { margin-bottom: 15px; }
+				.listing-photo { @include span(3 of 9); }
+				.listingInfo { 
+					@include span(6 of 9 last); 
+
+					.listingReview {
+						position: relative;
+						width: 70%;
+						height: auto;
+						padding-bottom: 0px;
+						right: auto;
+						text-align: left;
+						margin: 15px 0px;
+
+						&.forsale { top: 0px; margin-bottom: 15px; }
+
+						img { width: 8%; }
+					}
+
+					.listingInfoDetailsLeft, .listingInfoDetailsRight {
+						width: 100%;
+						margin-right: 0px;
+						clear: both;
+					}
+
+					&.jobListing {
+						.listingInfoDetailsLeft, .listingInfoDetailsRight {
+						width: 100%;
+						margin-right: 0px;
+						clear: both;
+					}
+					}
+				}
+
+				.listingInfoReadMore { width: 27%; padding-left: 7%; }
+
+				&.expanded {
+					.jobListing { @include span(6 of 9 last); }
+				}
+			}
+
+			.listingContact {
+				.listingWebsite { width: 40%; padding-left: 14%; }
+				.listingAdmin { display: none; }
+			}
+		}
+
+		.pagination {
+			padding-bottom: 6%;
+		}
+
+		input[type="text"] {
+			border-radius: 0px;
+			margin: 0px 0px 1.5% 0px;
+		}
+	}
+
+	section {
+		.filter, .jobalerts, .advert { display: none; }
+	}
+
+	footer {
+		height: auto;
+		padding-bottom: 4%;
+
+		.logo { display: none; }
+		.footerSection {
+			width: 48%;
+			padding-top: 0;
+			padding-left: 2%;
+			margin-right: 0;
+		}
+	}
+
+	.formBox {
+		label { clear: both; @include fontsize(12); } 
+		input[type="radio"], input[type="checkbox"] { position:relative; top: 2px; width: 20px !important; height: 20px !important; }
+
+		.options, .radio_wrap {
+			label { clear: none; line-height: 23px !important; }
+
+			.catsSlider label { width: 60% !important; }
+
+			input[type="checkbox"] {
+				clear: both;
+			}
+		}
+	}
+
+	.footerLinks { 
+		width: 100%; height: auto; padding-left: 0px; padding-bottom: 1%; 
+
+		.menu-footer-container {
+			display: block;
+			padding-left: 0px;
+			margin-bottom: 0px;
+
+			ul { 
+				width: 100%; 
+				padding-left: 0px;
+				margin-bottom: 0px;
+
+				li { margin-left: 0px; margin-right: 4%; }
+			}
+		}
+	}
+
+	body#register div.accountType { 
+		width: 100% !important; 
+		background-size: 10% !important;
+		padding-left: 15% !important;
+		padding-right: 10% !important;
+	}
+
+	#my-cwt {
+		.cols {
+			.colBox {
+				width: 98%;
+				display: block;
+			}
+			.colPad {
+				display: none;
+			}
+		}
+
+		.summaryRow {
+			.summaryBox h4 {
+				height: 40px;
+			}
+		}
+	}
+
+	.nav, .account, .accountWelcome { display: none; }
+
+	body {
+		padding-top: 50px;
+	}
+
+	nav.header {
+		background: $purple-dark;
+		padding: 10px;
+		position: fixed;
+		display: block;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 50px;
+		z-index: 999;
+
+		.navToggle {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+		.accountToggle {
+			position: absolute;
+			top: 10px;
+			right: 60px;
+		}
+	}
+
+	nav.mobile, nav.account {
+		display: block;
+		width: 80%;
+		height: 0;
+		min-height: 120%;
+		position: fixed;
+		top: 50px;
+		right: -800px;
+		background: $grey-light;
+		z-index: 1000;
+		border-left: 2px solid $purple-dark;
+		overflow: scroll;
+		padding-bottom: 20%;
+		z-index: 10;
+
+		ul {
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+
+			li {
+				@include fontsize(20);
+				border-bottom: 2px solid $purple-dark;
+
+				a {
+					display: block;
+					text-decoration: none;
+					padding: 10px;
+
+					&.home {
+						background: $purple-dark;
+						color: $white;
+					}
+
+					&.active {
+						background: $purple-light;
+						color: $purple-dark;
+					}
+				}
+			}
+		}
+	}
+
+	nav.account {
+		ul {
+			li.active {
+				a {
+					background: $green;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	div.mobileMask {
+		background: #000000;
+		opacity: 0.7;
+		filter: opacity(0.7);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		z-index: 9; 
+	}
+}

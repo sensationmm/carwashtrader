@@ -1,0 +1,16 @@
+
+#search {
+	
+
+	.searchBox {
+		@include span(full);
+		color: $white;
+		padding: 2.5%;
+		background: $purple-light;
+		margin-bottom: 4%; 
+
+		form.filter {
+			margin-top: 0;
+		}
+	}
+}

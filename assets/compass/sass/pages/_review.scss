@@ -1,0 +1,68 @@
+#reviews {
+
+	.cbrp_front_content {
+
+		width: 100% !important;
+		
+		h3, .codeboxr_rating_credit, .cbrating_comment_limit_label, .form-required, .user_info { display: none !important; }
+
+		.cbrp-content-container {
+			border: 0px !important;
+			padding: 0px !important;
+			margin: 0px !important;
+		}
+
+		.cbrating_commentarea { 
+			float: left !important;
+			width: 76% !important;
+			height: 100px !important; 
+		}
+
+		#cbrp-report { display: none !important; }
+
+		label, span.criteria-label {
+			display: block;
+			float: left !important;
+			font-weight: bold !important;
+			color: #ffffff !important;
+			margin-right: 10px !important;
+			width: 22% !important;
+			text-align: right !important;
+		}
+
+		.criteria-wrapper { width: 100% !important; height: 30px !important; margin: 0px !important; }
+
+		.criteria-star-wrapper { float: left !important; }
+
+		.criteria-star-hint { float: left !important; color: #fff !important; padding-left: 20px !important;}
+
+		.readonly-criteria-label, .readonly-criteria-average-label { color: $white !important; }
+
+		.readonly-criteria-wrapper { height: auto !important; }
+
+		.user_rate_time, .review_wrapper .user_rate_time { top: 0px !important; }
+
+		button#submit-rating {
+			@include fontsize(14);
+			background: $red !important;
+			color: $white !important;
+			padding: 1.5% 6% !important;
+			margin-left: 1% !important;
+			float: right !important;
+			-webkit-appearance: none !important;
+			cursor: pointer !important;
+			border: none !important;
+			border-radius: 0 !important;
+		}
+
+		 .review_rating:hover { background: none !important; }
+	}
+
+	.review_wrapper { clear: both; }
+	.review_wrapper p.cbrating_user_name { margin-bottom: 3px !important; }
+	.all-criteria-wrapper { margin-top: 0px !important; }
+	.review_wrapper .user_rate_time { top: 0px !important; }
+	.review_rating .review_user_rating_comment { padding-left: 0px !important; }
+	.review_rating .criteria-wrapper { padding-left: 0px !important; }
+
+}

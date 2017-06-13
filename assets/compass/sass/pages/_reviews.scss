@@ -1,0 +1,66 @@
+
+#reviews {
+		
+	table.form_table {
+		width: 100%;
+	}
+	
+	.formBox .rr_star {
+		color: $white;
+	}
+	
+	.rr_form_heading {
+		display: block;
+		float: left !important;
+		display: block !important;
+		width: 100% !important;
+		padding-top: 3% !important;
+		margin: 0 5% 0 0 !important;
+		color: $white !important;
+		@extend %montserrat-bold-webfont;
+		whitespace: nowrap;
+		
+		span { display:block; @include fontsize(11); padding-top: 10%; }
+	}
+	
+	.rr_form_heading:after {
+		content: none !important;
+	}
+	
+	.rr_form_input {
+		width: 75%;
+		
+		input[type="text"], textarea {
+			width: 100% !important;
+		}
+		
+		input[type="submit"] {
+			float: left !important;
+		}
+	}
+	
+	.rr_form_input:after {
+		content: none !important;
+	}
+	
+	.rr_star {
+		cursor: pointer;
+	}
+	
+	
+	.testimonial {
+		width: 100% !important;
+		border-bottom: 1px solid $purple-dark;
+		
+		.rr_title, .stars {
+			margin-bottom: 2%;
+		}
+		
+		.rr_review_text {
+			line-height: 1.4;
+		}
+		
+		.drop_cap { display: none !important; }
+	}
+	
+}

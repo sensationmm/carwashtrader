@@ -1,0 +1,74 @@
+
+body#register, body#registration-subscription {
+	
+	.accountType {
+		@include span(4 of 9);
+		padding-left: 10%;
+		margin: 3.5% 3.5% 0% 3.5%;
+		background: top left no-repeat;
+		background-size: 15%;
+		min-height: 8%;
+		
+		h3, h4 {
+			color: $white;
+			@include fontsize(16);
+		}
+
+		h4.price {
+			color: $purple-light;
+		}
+		
+		p { 
+			@include fontsize(12);
+			line-height: 1.2;
+		}
+		
+		&.accountguest { background-image: url(../images/icon-accountGuest.svg); }
+		&.accounttrader { background-image: url(../images/icon-accountTrader.svg); }
+		&.accountcommercial-estate-agent { background-image: url(../images/icon-accountCommercial.svg); }
+		&.accountsupplier { background-image: url(../images/icon-accountSupplier.svg); }
+
+		.submit {
+			background: $red;
+			float: left;
+			padding: 5%;
+			color: $white;
+			cursor: pointer;
+			margin-bottom: 5%;
+			text-align: center;
+
+			a { text-decoration: none; }
+			
+			&:hover {
+				color: $purple-dark;
+				background: $purple-light;
+			}
+		}
+	}
+}
+
+body#registration-confirmation, body#registration-subscription, body#subscription-success {
+	
+	.confirmation {
+		@extend .purpleBox;
+		background-image: url(../images/alert-registration-confirmation.svg) !important;
+		background-size: 40% !important;
+		
+		
+		h3 { color: $white !important; }
+
+		a:link, a:visited, a:active { text-decoration: underline; }
+		a:hover { color: $purple-light; }
+		
+		padding: 7% 2% 7% 40% !important;
+	}
+	
+}
+
+
+html.ie8 body#register, html.ie8 body#registration-confirmation, html.ie8 body#registration-subscription, html.ie8 body#subscription-success {
+	.confirmation { padding: 4% !important; min-height: 0 !important; }
+
+	.accountType { padding-left: 0; }
+}
+

@@ -1,0 +1,28 @@
+<?php
+	session_start();
+	
+	unset($_SESSION["cwt_searchTerms"]);
+	unset($_SESSION["cwt_searchPostcode"]);
+	unset($_SESSION["cwt_searchOrderBy"]);
+	unset($_SESSION["cwt_searchOrder"]);
+	unset($_SESSION["cwt_setFilter"]);	
+	unset($_SESSION["cwt_filtered"]);
+	unset($_SESSION["cwt_jobsSearchTerms"]);
+	unset($_SESSION["cwt_jobSearchPostcode"]);
+	unset($_SESSION["cwt_jobSearchOrderBy"]);
+	unset($_SESSION["cwt_jobSearchOrder"]);
+	unset($_SESSION["cwt_setJobFilter"]);	
+	unset($_SESSION["cwt_jobFiltered"]);
+	unset($_SESSION["cwt_productSearchTerms"]);
+	unset($_SESSION["cwt_productSearchPostcode"]);
+	unset($_SESSION["cwt_productSearchOrderBy"]);
+	unset($_SESSION["cwt_productSearchOrder"]);
+	unset($_SESSION["cwt_productSetFilter"]);	
+	unset($_SESSION["cwt_productFiltered"]);
+	unset($_SESSION["cwt_supplierSearchTerms"]);
+	unset($_SESSION["cwt_supplierSearchPostcode"]);
+	unset($_SESSION["cwt_supplierSearchOrderBy"]);
+	unset($_SESSION["cwt_supplierSearchOrder"]);
+	unset($_SESSION["cwt_supplierSetFilter"]);	
+	unset($_SESSION["cwt_supplierFiltered"]);
+?>

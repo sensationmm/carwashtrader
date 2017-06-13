@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px"
+	 height="50px" viewBox="0 0 80 50" enable-background="new 0 0 80 50" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<rect x="-1.047" y="-0.511" display="inline" stroke="#000000" stroke-miterlimit="10" width="81.818" height="50.94"/>
+</g>
+<g id="Layer_2">
+	<path display="none" fill="#FFFFFF" d="M9.925,24.959C26.548,24.959,40,31.654,40,39.928C40,31.677,53.398,25,69.956,25
+		c-16.591,0-30.016,1.84-30.016,4.113C39.94,26.817,26.516,24.959,9.925,24.959z"/>
+	<path display="none" fill="#FFFFFF" d="M20,9.991c10.979,0,19.862,6.695,19.862,14.969c0-8.274,9.007-14.969,20.138-14.969
+		c-11.088,0-20.06,1.085-20.06,2.426C39.94,11.076,31.022,9.991,20,9.991z"/>
+	<polyline display="none" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" points="39.94,30.202 9.925,24.959 39.94,39.928 
+		69.956,24.959 39.94,30.153 	"/>
+	<polygon fill="#CABBDC" points="60,9.991 39.94,24.959 20,9.991 39.94,17.417 	"/>
+	<polyline fill="#CABBDC" points="39.94,31.368 69.956,17.417 39.94,39.928 9.925,17.417 39.94,31.236 	"/>
+</g>
+<g id="Layer_3" display="none">
+	<path display="inline" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M10,25"/>
+	<path display="inline" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M40,40"/>
+	<path display="inline" fill="#FFFFFF" d="M69.875,25C59.97,25,40,35.027,40,40c0-4.973-20.054-15-30-15c9.946,0,30,3.427,30,5.126
+		C40,28.427,59.971,25,69.875,25z"/>
+	<path display="inline" fill="#FFFFFF" d="M60,10c-4.424,0-20,11.682-20,15c0-3.318-15.576-15-20-15c4.424,0,20,3.699,20,4.75
+		C40,13.699,55.576,10,60,10z"/>
+</g>
+</svg>

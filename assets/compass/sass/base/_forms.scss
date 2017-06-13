@@ -1,0 +1,333 @@
+
+	
+form.filter {
+	@include fontsize(12);
+	margin-top: 2%;
+	
+	label.textInput {
+		float: left;
+		display: block;
+		width: 30%;
+		padding: 0 1.5%;
+		color: $purple-dark;
+		margin-bottom: 1%;
+		background: $purple-light;
+		@include fontsize(14);
+		clear: both;
+		height: 2.8em;
+		line-height: 2.8em;
+	}
+
+	input[type="text"] {
+		float: left;
+		width: 70%;
+		padding: 0 1.5%;
+		color: $grey-mid;
+		margin-bottom: 1%;
+		line-height: 1.4;
+		border-radius: 0px;
+		height: 2.8em;
+		line-height: 2.8em;
+	}
+	
+	input[type="submit"], input[type="reset"], a.formButton, button {
+		@include fontsize(14);
+		background: $red;
+		color: $white;
+		padding: 1.5% 6%;
+		margin-left: 1%;
+		float: right;
+		-webkit-appearance: none;
+		cursor: pointer;
+	}
+
+	a.formButton {
+		text-decoration: none;
+
+		&:hover { background-color: $grey-pale; color: $purple-dark; }
+	}
+	
+	label {
+		@include fontsize(12);
+	}
+	
+	.filterOrderBy {
+		float: left;
+		margin-bottom: 1%;
+		clear: left;
+	}
+
+	.filterOrder {
+		display: none;
+	}
+}
+
+.formBox {
+	@extend .purpleBox;
+
+	&.blank { background: none; padding: 0; clear: both; }
+
+	.formBoxSplit {
+		padding: 2%;
+		background-color: $purple-mid;
+		margin-bottom: 2%;
+	}
+	
+	h2 { display: none; }
+	
+	form {
+		width: 100% !important;
+	}
+	
+	ul {
+		list-style: none;
+		
+		li {
+			margin: 0 !important;
+			.fieldset { 
+				width: 100% !important;
+				padding: 0 !important; 
+				margin-bottom: 0.5% !important;
+				&.error {
+					padding: 2% !important;
+				}
+				
+				#piereg_passwordStrength { width: 73% !important; border: 0 !important; }
+				
+				.radio_wrap {
+					float: left !important;
+					width: 73% !important;
+					padding-top: 1% !important;
+					white-space: nowrap !important;
+					
+					@include breakpoint($mobile $tablet-landscape) {
+						width: 100% !important;
+					}
+					
+					label { 
+						width: auto !important;
+						white-space: nowrap !important;
+						margin-right: 1% !important;
+						vertical-align: middle !important;
+						padding-top: 0 !important;
+					} 
+				}
+				
+				hr {
+					border: 0;
+					border-top: 1px solid $purple-light !important;
+					margin: 2% 0 !important;
+				}
+			}
+			
+			.legend_txt { clear: both; }
+		}
+	}
+
+	.catsSlider {
+		display: none;
+		clear: both;
+
+		input {
+			margin-left: 6%;
+		}
+	}
+
+	.catsControl {
+		padding: 0;
+		display: block;
+		@include fontsize(11);
+		cursor: pointer;
+	}
+				
+	#nav { 
+		clear: both !important; 
+		
+		a:link, a:visited, a:active {
+			color: $white;
+		}
+	}
+	
+	label {
+		@include fontsize(14);
+		float: left !important;
+		display: block !important;
+		width: 22% !important;
+		padding-top: 1% !important;
+		margin: 0 5% 0 0 !important;
+		color: $white !important;
+		@extend %montserrat-bold-webfont;
+		
+		span { display:block; @include fontsize(11); padding-top: 10%; }
+	}
+	
+	input {
+		float: left;
+		
+		&[type="text"], &[type="email"], &[type="password"] {
+			width: 73% !important;
+			padding: 1% !important;
+			margin: 0 0 2% 0 !important;
+			border: 0 !important;
+			border-radius: 0 !important;
+		}
+		
+		&[type="file"] {
+			width: 40% !important;
+			padding: 0px !important;
+			margin: 0 0 2% 0 !important;
+			border: 0px !important;
+			outline: 0px !important;
+			border-radius: 0px !important;
+			color: $white;
+			border-style: solid !important;
+			box-shadow: none !important;
+		}
+		
+		&[type="radio"] {
+			width: 20px !important;
+			padding: 0 !important;
+			margin: 2px 4% 2% 0 !important;
+			vertical-align: middle !important;
+		}
+		
+		&[type="checkbox"] {
+			margin-top: 1.5% !important;
+			margin-right: 3% !important;
+		}
+	}
+	
+	textarea, select {
+		width: 73% !important;
+		padding: 1% !important;
+		margin: 0 0 2% 0 !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+	}
+	
+	.wp-editor-wrap, .options {
+		width: 73% !important;
+		float: left !important;
+		margin: 0 0 2% 0 !important;
+		
+		label { width: 83% !important; }
+	}
+	
+	.options {
+		label.inline {
+			width: auto !important;
+		}
+
+		input[type="radio"] {
+			top: 3px; 
+			position: relative;
+			margin-right: 2% !important;
+		}
+	}
+
+	input[type="submit"], input[type="reset"] {
+		background: $red;
+		min-width: 20%;
+		padding: 1.5% 2% 1% 2%;
+		float: right;
+		color: $white;
+		cursor: pointer;
+		
+		&:hover {
+			color: $purple-dark;
+			background: $purple-light;
+		}
+	}
+
+	.inputNote { 
+		clear: both;
+		display:block; 
+		@include fontsize(11); 
+		margin-left: 27%;
+		top: -10px;
+	}
+
+	.piereg_message {
+		margin-bottom: 2% !important;	
+		border: 0 !important;
+	}
+	
+	.piereg_warning, .piereg_login_error {
+		background-color: $red !important;
+		margin-bottom: 2% !important;	
+		border: 0 !important;
+		background-position: 20px center !important;
+	}
+	
+	.piereg_login_wrapper {
+		margin: 0 !important;
+	}
+	
+	#recaptcha_widget_div { float: left; }
+	
+	#piereg_pie_form_heading { display: none; }
+	
+	.piereg_entry-content {
+		max-width: none;
+		
+		div { display: block !important; }
+	}
+	
+	form.piereg_resetpassform {
+		.nav, .backtoblog { display: none; }
+	}
+	
+	
+	.error {
+		display: block;
+		padding: 2%;
+		text-align: center;
+		color: $white;
+		border: 1px solid $red;
+	}
+}
+
+
+	.wpcf7-form p {
+		clear: both;
+		line-height: auto;
+	}
+
+	#password_meter { display: none; }
+
+	.wpcf7-not-valid-tip {
+		float: left;
+		display: block;
+		color: #fff !important;
+		width: 100%;
+		text-align: center;
+		padding: 1%;
+		margin-bottom: 2%;
+		border: 1px solid #fff;
+	}
+
+	.wpcf7-response-output {
+		@extend .purpleBox;
+		background-size: 40% !important;
+		height: auto !important;
+		min-height: 18em;
+		clear: both;
+		background-image: url(../images/alert-confirm.svg) !important;
+		border: 0px !important;
+		padding: 7% 2% 7% 40% !important;
+		margin: 0 0 2% 0 !important;
+		h3 { color: $white !important; }
+
+		&.wpcf7-validation-errors { background-image: url(../images/no-results.svg) !important; }
+	}
+
+
+	body.ie8 {
+		.wpcf7-response-output { 
+			background-image: url(../images/alert-confirm.png) !important; 
+
+			&.wpcf7-validation-errors { background-image: url(../images/no-results.png) !important; }
+		}
+	}
+
+

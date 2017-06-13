@@ -1,0 +1,248 @@
+#my-cwt {
+	
+	.cols {
+		display: table;
+		@include span(full);
+		@include clearfix;
+		margin-bottom: 4%;
+		
+		.colBox {
+			width: 48%;
+			background: $purple-light;
+			display: table-cell;
+			padding: 2%;
+			margin-bottom: 2%;
+			
+			ul {
+				list-style: none;
+				padding: 0px;
+				margin: 0px;
+
+				li {
+					margin-bottom: 5px;
+					
+					b { color: $purple-dark; }
+				}
+			}
+
+			p {
+				text-align: center;
+			}
+
+			a:link, a:visited, a:active { text-decoration: underline; }
+			a:hover { color: $purple-dark; }
+			
+			&:nth-of-type(2) {
+				margin-right: 0;
+				background: $red;
+			}
+		}
+		
+		.colPad { 
+			width: 4%;
+		}
+	}
+	
+}
+
+#my-cwt {
+	.confirmation {
+		@extend .purpleBox;
+		background-size: 40% !important;
+		height: auto !important;
+		min-height: 18em;
+
+		clear: both;
+		
+		&.added { background-image: url(../images/alert-confirm.svg) !important; }
+		&.edited { background-image: url(../images/alert-confirm.svg) !important; }
+		&.deleted { background-image: url(../images/alert-confirm.svg) !important; }
+		&.noresults { background-image: url(../images/no-results.svg) !important; }
+		
+		
+		h3 { color: $white !important; }
+		
+		padding: 7% 2% 7% 40% !important;
+	}
+	
+	.thumb {
+		width: 73%;
+		float: left;
+		margin-bottom: 2%;
+		
+		label { width: 60% !important; }
+		img { float: left; margin-right: 4%; }
+	}
+	
+	.listingEdit {
+		padding: 1%;
+		background: $red;
+		clear: both;
+		text-align: center;
+		color: $white;
+
+		a {
+			text-decoration: none;
+
+			&:hover { text-decoration: underline; }
+		}
+	}
+	
+	.listingSell {
+		padding: 1%;
+		background: $green;
+		clear: both;
+		text-align: center;
+		color: $white;
+
+		a {
+			text-decoration: none;
+
+			&:hover { text-decoration: underline; }
+		}
+	}
+
+	h3 {
+		color: $purple-dark;
+		@extend %montserrat-bold-webfont;
+		@include fontsize(20);
+		font-weight: normal;
+		@include span(full);
+		padding: 1.183% 1.3%;
+		background: $purple-light;
+		margin-bottom: 4%;  
+	}
+
+	.listingInner h3 { margin-bottom: 2%; }
+
+	.summaryRow {
+		margin-bottom: 2%;
+
+		.summaryBox {
+			@include span(3 of 9);
+			padding: 2%;
+			background: $grey-light;
+			text-align: center;
+			margin-bottom: 4%; 
+
+			&:nth-child(3) {
+				@include span(3 of 9 last);
+			}
+
+			&.summaryBox2 {
+				@include span(4 of 9);
+				left: 5%;
+			}
+
+			&.summaryBox4 {
+				@include span(2 of 9);
+				left: 5%;
+			}
+
+			h3, h4 {
+				color: $grey-dark;
+				@include fontsize(16);
+			}
+			
+			.summaryCount { 
+				@include fontsize(60);
+				color: $purple-dark;
+			}
+
+			.submit {
+				background: $red;
+				float: left;
+				padding: 5%;
+				color: $white;
+				cursor: pointer;
+				margin-top: 5%;
+				text-align: center;
+				
+				&:hover {
+					color: $purple-dark;
+					background: $purple-light;
+				}
+			}
+		}
+	}
+
+	.paymentRow {
+		margin-bottom: 2%;
+
+		.paymentBox {
+			@include span(3 of 9);
+			padding: 2%;
+			background-color: $purple-mid;
+			background-size: 20%;
+			background-position: 95% 10%;
+			background-repeat: no-repeat;
+
+			&.months1 { background-image: url(../images/icon-payment1month.svg); }
+			&.months3 { background-image: url(../images/icon-payment3month.svg); }
+			&.months6 { background-image: url(../images/icon-payment6month.svg); }
+
+			&:nth-child(3) {
+				@include span(3 of 9 last);
+			}
+
+			h3, h4 {
+				color: $white;
+				@include fontsize(16);
+				background: none;
+			}
+
+			h4.price {
+				color: $purple-light;
+			}
+			
+			p { 
+				@include fontsize(12);
+				line-height: 1.2;
+			}
+
+			.submit {
+				background: $red;
+				float: left;
+				padding: 5%;
+				color: $white;
+				cursor: pointer;
+				margin-top: 5%;
+				text-align: center;
+
+				a {
+					text-decoration: none;
+				}
+				
+				&:hover {
+					color: $purple-dark;
+					background: $purple-light;
+				}
+			}
+		}
+	}
+}
+
+#my-cwtadverts {
+	.advertThumb {
+		float: left;
+		margin-right: 2%;
+
+		img { height: 100%; width: auto; } 
+	}
+}
+
+
+
+html.ie8 #my-cwt {
+	.confirmation { padding: 4% !important; min-height: 0 !important; }
+
+	.paymentRow {
+		.paymentBox { margin: 0 1.3% 4% 1.3%; }
+	}
+
+	.summaryRow {
+		.summaryBox { margin: 0 1.3% 4% 1.3%; }
+	}
+}
+
+

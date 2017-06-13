@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+body {
+	background: #cecece;	
+	font-family: arial;
+	font-size: 30px;
+	color: #303188;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.body {
+	position: relative;
+	width: 600px;
+	padding-top: 60px;
+	margin: 0px auto;	
+}
+
+a:link, a:visited, a:active {
+	color: #5d4b9d;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div.social {
+	position: absolute;
+	top: 0px;
+	right: 44px;	
+	width: 288px;
+}
+
+div.socialIcon {
+	float: left;
+	margin-left: 10px;
+	width: 134px;
+	height: 50px;
+	overflow: hidden;	
+}
+
+div.socialIcon a.facebook:link, div.socialIcon a.facebook:visited, div.socialIcon a.facebook:active {
+	display: block;
+	width: 134px;
+	height: 50px;
+	background: url(../images/sprite-facebook.gif) 0px 0px no-repeat;
+}
+
+div.socialIcon a.twitter:link, div.socialIcon a.twitter:visited, div.socialIcon a.twitter:active {
+	display: block;
+	width: 134px;
+	height: 50px;
+	background: url(../images/sprite-twitter.gif) 0px 0px no-repeat;
+}
+
+div.socialIcon a.facebook:hover, div.socialIcon a.twitter:hover {
+	background-position: 0px -50px;
+}
